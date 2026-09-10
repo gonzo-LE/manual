@@ -109,17 +109,19 @@ Custom Mode switches (yellow)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Custom modes can be enabled from start by editing the -> User customisations.
-==== ======================================
+
+==== ===================
  M5   Directory mode 
  10   Scratch mode 
  18   ExtendedLoop mode
-==== ======================================
+==== ===================
 
 Custom Modes
 ============
 
 Directory mode 
 --------------
+
 ==== =========================================================================
  M4   Trackselector (left/right = up/down) (press = right aka open subfolder)
 ==== =========================================================================
@@ -134,6 +136,7 @@ ExtendedLoop mode
 -----------------
 
 This mode also enables quantisation, so the LOOP IN and LOOP OUT are aligned at the beat grid.
+
 ===== ==================================================================================
   8*   PAR = moves loop block* (left/right = backward/forward)
  12    PITCH-BEND(-/+) = changes size of the loop (-/+ = half/double), but keeps anchor
