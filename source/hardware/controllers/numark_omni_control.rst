@@ -109,23 +109,26 @@ Custom Mode switches (yellow)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Custom modes can be enabled from start by editing the -> User customisations.
-==== ======================================
+
+==== ===================
  M5   Directory mode 
  10   Scratch mode 
  18   ExtendedLoop mode
-==== ======================================
+==== ===================
 
 Custom Modes
 ============
 
 Directory mode 
 --------------
+
 ==== =========================================================================
  M4   Trackselector (left/right = up/down) (press = right aka open subfolder)
 ==== =========================================================================
 
 Scratch mode
 ------------
+
 ==== ====================================================
  23   JOGWHEEL = scratch (left/right = backward/forward)
 ==== ====================================================
@@ -134,6 +137,7 @@ ExtendedLoop mode
 -----------------
 
 This mode also enables quantisation, so the LOOP IN and LOOP OUT are aligned at the beat grid.
+
 ===== ==================================================================================
   8*   PAR = moves loop block* (left/right = backward/forward)
  12    PITCH-BEND(-/+) = changes size of the loop (-/+ = half/double), but keeps anchor
@@ -141,15 +145,25 @@ This mode also enables quantisation, so the LOOP IN and LOOP OUT are aligned at 
  14    LOOP OUT = sets loop-out point and reloop; keep pressed to disable reloop
  20*   SET CUE = sets new cue point at the closest beat grid (because of quantisation)
 ===== ==================================================================================
+
 * = this is standard behavior of MIXXX
 
 User customisations
 ===================
 
-Edit the js-file at the "LoadUserDefaults" function to customise the controller by enabling custom modes from start and:
--  FINE PITCH speed adjusting
--  JOGWHEEL speed adjusting (Scratch mode and normal mode)
+Edit the javascript file at the "LoadUserSettings" function to customise the controller:
 
+==================== =============== ======= ===================================================================================================================
+Setting              Type            Default Description
+simpleCue            boolean	       true  if "true" then CUE button doesn't stop playing
+simplePFL            boolean	       true  if "true" then enabling PFL on one deck, disables PFL on the opposite deck
+extendedLooping      boolean           true  if "true" then ExtendedLoop mode is enabled on start
+ScratchMode          boolean          false  if "true" then ScratchMode mode is enabled on start
+DirectoryMode        boolean          false  if "true" then DirectoryMode mode is enabled on start
+FinePitchAdjustment  positive number      9  the higher the value, the finer the changes done by FinePitch (exponential!); 6 = same as rate sliders
+JogScratchAdjustment positive number      3  the higher the value, the slower the scratches by JogWheel rotation (only when ScratchMode enabled) (exponential!)
+JogMoveAdjustment    positive number      3  the higher the value, the faster the "movement" by JowWheel rotation (only when ScratchMode disabled)
+==================== =============== ======= ===================================================================================================================
 
 Known Issues
 ============
